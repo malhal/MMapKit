@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EC507BD01F716ED6003940EB /* MMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC507BCB1F716EC4003940EB /* MMapKit.framework */; };
-		EC507BD11F716ED6003940EB /* MMapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EC507BCB1F716EC4003940EB /* MMapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EC6758531DAFDA3900838798 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6758521DAFDA3900838798 /* main.m */; };
 		EC6758561DAFDA3900838798 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6758551DAFDA3900838798 /* AppDelegate.m */; };
 		EC6758591DAFDA3900838798 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6758581DAFDA3900838798 /* MasterViewController.m */; };
@@ -16,6 +14,8 @@
 		EC6758611DAFDA3900838798 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC6758601DAFDA3900838798 /* Assets.xcassets */; };
 		EC6758641DAFDA3900838798 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC6758621DAFDA3900838798 /* LaunchScreen.storyboard */; };
 		ECCDE27D1DB6BEEA00EC8108 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECCDE27B1DB6BEEA00EC8108 /* Main.storyboard */; };
+		ECE7083523F226C0003FF706 /* MMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC507BCB1F716EC4003940EB /* MMapKit.framework */; };
+		ECE7083623F226C0003FF706 /* MMapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EC507BCB1F716EC4003940EB /* MMapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,14 +33,7 @@
 			remoteGlobalIDString = EC507B881F71680C003940EB;
 			remoteInfo = MMapKitTests;
 		};
-		EC507BCE1F716ECD003940EB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EC507BC41F716EC4003940EB /* MMapKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = EC507B7E1F71680C003940EB;
-			remoteInfo = MMapKit;
-		};
-		EC507BD21F716ED6003940EB /* PBXContainerItemProxy */ = {
+		EC8D858D23F2271E008B7A7A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EC507BC41F716EC4003940EB /* MMapKit.xcodeproj */;
 			proxyType = 1;
@@ -50,13 +43,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		EC6758781DAFDFDF00838798 /* Embed Frameworks */ = {
+		ECE7083723F226C0003FF706 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EC507BD11F716ED6003940EB /* MMapKit.framework in Embed Frameworks */,
+				ECE7083623F226C0003FF706 /* MMapKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,6 +57,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EC2F7E192004212D001B9D3B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		EC507BC41F716EC4003940EB /* MMapKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = MMapKit.xcodeproj; sourceTree = SOURCE_ROOT; };
 		EC67584E1DAFDA3900838798 /* MMKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MMKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC6758521DAFDA3900838798 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -84,7 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC507BD01F716ED6003940EB /* MMapKit.framework in Frameworks */,
+				ECE7083523F226C0003FF706 /* MMapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +140,7 @@
 		EC6758821DAFDFF700838798 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EC2F7E192004212D001B9D3B /* MapKit.framework */,
 				EC507BC41F716EC4003940EB /* MMapKit.xcodeproj */,
 			);
 			name = Frameworks;
@@ -162,13 +157,12 @@
 				EC67584A1DAFDA3900838798 /* Sources */,
 				EC67584B1DAFDA3900838798 /* Frameworks */,
 				EC67584C1DAFDA3900838798 /* Resources */,
-				EC6758781DAFDFDF00838798 /* Embed Frameworks */,
+				ECE7083723F226C0003FF706 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				EC507BCF1F716ECD003940EB /* PBXTargetDependency */,
-				EC507BD31F716ED6003940EB /* PBXTargetDependency */,
+				EC8D858E23F2271E008B7A7A /* PBXTargetDependency */,
 			);
 			name = MMKDemo;
 			productName = MHLocationDemo;
@@ -181,7 +175,7 @@
 		EC6758461DAFDA3900838798 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Malcolm Hall";
 				TargetAttributes = {
 					EC67584D1DAFDA3900838798 = {
@@ -191,7 +185,7 @@
 			};
 			buildConfigurationList = EC6758491DAFDA3900838798 /* Build configuration list for PBXProject "MMKDemo" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -258,15 +252,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		EC507BCF1F716ECD003940EB /* PBXTargetDependency */ = {
+		EC8D858E23F2271E008B7A7A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MMapKit;
-			targetProxy = EC507BCE1F716ECD003940EB /* PBXContainerItemProxy */;
-		};
-		EC507BD31F716ED6003940EB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = MMapKit;
-			targetProxy = EC507BD21F716ED6003940EB /* PBXContainerItemProxy */;
+			targetProxy = EC8D858D23F2271E008B7A7A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -294,6 +283,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -303,12 +293,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -335,7 +327,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -346,6 +337,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -355,12 +347,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -381,7 +375,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
