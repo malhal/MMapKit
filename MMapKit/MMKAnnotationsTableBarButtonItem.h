@@ -27,7 +27,7 @@
         [self.navigationController pushViewController:n animated:YES];
     }else{
         //came from the accessory on the table cell in the annotations table 
-        DLAnnotationsTableBarButtonItem* a = (DLAnnotationsTableBarButtonItem*)control;
+        MMKAnnotationsTableBarButtonItem* a = (MMKAnnotationsTableBarButtonItem*)control;
         [a.navigationController pushViewController:n animated:YES];
  }
  }
