@@ -166,5 +166,25 @@ double pixelSpaceYToLatitude(double pixelY)
     return zoomLevel;
 }
 
+//this is NO for backwards compat
+-(void)mmk_setVisibleMapRectToAnnotations{
+    [self mmk_setVisibleMapRectToAnnotationsAnimated:NO];
+}
+
+-(void)mmk_setVisibleMapRectToAnnotationsAnimated:(BOOL)animated{
+    MKMapRect zoomRect = MKMapRectNull;
+    for (id <MKAnnotation> annotation in self.annotations)
+    {
+        MKMapPoint annotationPoint = MKMapPointForCoordinate(annotation.coordinate);
+        MKMapRect pointRect = MKMapRectMake(annotationPoint.x, annotationPoint.y, 0, 0);
+        if (MKMapRectIsNull(zoomRect)) {
+            zoomRect = pointRect;
+        } else {
+            zoomRect = MKMapRectUnion(zoomRect, pointRect);
+        }
+    }
+    // add extra padding round edges
+    [self setVisibleMapRect:zoomRect edgePadding:UIEdgeInsetsMake(10, 10, 10, 10) animated:YES];
+}
 
 @end

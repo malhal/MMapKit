@@ -22,4 +22,7 @@
 
 - (double)mmk_zoomLevel;
 
+- (void)mmk_setVisibleMapRectToAnnotations;
+- (void)mmk_setVisibleMapRectToAnnotationsAnimated:(BOOL)animated;
+
 @end
